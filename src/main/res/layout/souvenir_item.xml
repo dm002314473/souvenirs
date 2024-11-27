@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Souvenir Name"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btnDeleteSouvenir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Price: $0.00"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvOrderedPieces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ordered: 0"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/etSoldPieces"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter sold pieces"
+        android:inputType="number"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvRevenue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revenue: $0.00"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_green_dark" />
+
+    <Button
+        android:id="@+id/btnSaveSoldPieces"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:visibility="gone" /> <!-- Initially hidden -->
+</LinearLayout>
