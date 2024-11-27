@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class AddSouvenirActivity extends AppCompatActivity {
 
-    private EditText etName, etPrice, etCount;
+    private EditText etName, etPrice, etOrderedPieces;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,26 +20,26 @@ public class AddSouvenirActivity extends AppCompatActivity {
 
         etName = findViewById(R.id.etName);
         etPrice = findViewById(R.id.etPrice);
-        etCount = findViewById(R.id.etCount);
+        etOrderedPieces = findViewById(R.id.etOrderedPieces);
         Button btnSaveSouvenir = findViewById(R.id.btnSaveSouvenir);
 
         btnSaveSouvenir.setOnClickListener(v -> {
             String name = etName.getText().toString();
             String priceStr = etPrice.getText().toString();
-            String countStr = etCount.getText().toString();
+            String orderedStr = etOrderedPieces.getText().toString();
 
-            if (name.isEmpty() || priceStr.isEmpty() || countStr.isEmpty()) {
+            if (name.isEmpty() || priceStr.isEmpty() || orderedStr.isEmpty()) {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             double price = Double.parseDouble(priceStr);
-            int count = Integer.parseInt(countStr);
+            int ordered = Integer.parseInt(orderedStr);
 
             Intent resultIntent = new Intent();
             resultIntent.putExtra("name", name);
             resultIntent.putExtra("price", price);
-            resultIntent.putExtra("count", count);
+            resultIntent.putExtra("ordered", ordered);
 
             setResult(RESULT_OK, resultIntent);
             finish();

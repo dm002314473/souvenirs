@@ -73,7 +73,7 @@ public class SouvenirAdapter extends ArrayAdapter<Souvenir> {
         // Set values
         tvName.setText(souvenir.getName());
         tvPrice.setText(String.format("$%.2f", souvenir.getPrice()));
-        tvOrderedPieces.setText("Ordered: " + souvenir.getOrderedPieces());
+        tvOrderedPieces.setText(String.format("Ordered: %d", souvenir.getOrderedPieces()));
         etSoldPieces.setText(String.valueOf(souvenir.getSoldPieces()));
         tvRevenue.setText(String.format("$%.2f", souvenir.getIndividualRevenue()));
 

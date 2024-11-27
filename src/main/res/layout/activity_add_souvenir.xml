@@ -21,7 +21,7 @@
         android:inputType="numberDecimal"/>
 
     <EditText
-        android:id="@+id/etCount"
+        android:id="@+id/etOrderedPieces"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Count"
